@@ -40,7 +40,7 @@ public class YeezyWeatherDB {
 		}
 	}
 	/*从数据库读取全国所有省份信息。*/
-	public List<Province> loadProvince(){
+	public List<Province> loadProvinces(){
 		List<Province> list=new ArrayList<Province>();
 		Cursor cursor=db
 				.query("Province", null, null, null, null, null, null);
