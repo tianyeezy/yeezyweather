@@ -1,6 +1,7 @@
 package com.example.yeezyweather.activity;
 
 import com.example.yeezyweather.R;
+import com.example.yeezyweather.service.AutoUpdateService;
 import com.example.yeezyweather.util.HttpCallbackListener;
 import com.example.yeezyweather.util.HttpUtil;
 import com.example.yeezyweather.util.Utility;
@@ -134,6 +135,8 @@ public class WeatherActivity extends Activity implements OnClickListener {
 		currentDateText.setText(prefs.getString("current_date",""));
 		weatherInfoLayout.setVisibility(View.VISIBLE);
 		cityNameText.setVisibility(View.VISIBLE);
+		Intent intent=new Intent(this,AutoUpdateService.class);
+		startService(intent);
 	}
 	@Override
 	public void onClick(View v) {
